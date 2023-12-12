@@ -43,11 +43,11 @@ public class EmployeeService {
     public Employee getEmployeeById(String id){
         return employees.get(id);
     }
-    @CacheEvict(value = "#id",cacheNames = "employee")
+    @CacheEvict(key = "#id",cacheNames = "employee")
     public void deleteById(String id){
         employees.remove(id);
     }
-    @CachePut(value = "#id",cacheNames = "employee")
+    @CachePut(key = "#id",cacheNames = "employee")
     public Employee updateEmployee(String id , Employee employee){
 
         return employees.replace(id,employee);
