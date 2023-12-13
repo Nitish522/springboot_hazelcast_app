@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hazel-mc
+  labels:
+    app: hazel-mc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hazel-mc
+  template:
+    metadata:
+      labels:
+        app: hazel-mc
+    spec:
+      #      serviceAccountName: hz-service-account
+      containers:
+        - name: hazel-mc
+          image: hazelcast/management-center:5.3.3
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: MC_DEFAULT_CLUSTER
+              value: my-app
+            - name: MC_DEFAULT_CLUSTER_MEMBERS
+              value: hz-app-service
+          ports:
+            - containerPort: 8080
