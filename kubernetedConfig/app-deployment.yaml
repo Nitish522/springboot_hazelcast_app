@@ -14,7 +14,6 @@ spec:
       labels:
         app: hazel-app
     spec:
-      serviceAccountName: hz-service-account
       containers:
         - name: hazel-app
           image: hz-app:0.0.1
