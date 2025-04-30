@@ -37,7 +37,7 @@ Let’s have a look at how to implement each topology with Spring.
 
 This topology means that every instance of the application has an integrated member:
 
-<img height="300" src="/Users/nitishku/my workspace/spring-boot-hazelcast/doc/image/embedded-cache.webp" width="600"/>
+![embedded_cache.png](image/embedded_cache.png)
 
 #### **Embedded Cache Topology**
 
@@ -133,7 +133,7 @@ The method setMaxIdleSeconds(20) defines how long the entry stays in the cache w
 
 This topology means that we set up a separate cache cluster, and our application is a client of this cluster.
 
-<img height="300" src="/Users/nitishku/my workspace/spring-boot-hazelcast/doc/image/client-server-cache.webp" width="600"/>
+![client_server_cache.png](image/client_server_cache.png)
 
 #### Client-Server Cache Topology
 
@@ -198,7 +198,7 @@ We can avoid this disadvantage by using near-cache.
 
 Near-cache is a local cache that is created on a Hazelcast member or the client. Let’s look at how it works when we create a near-cache on a hazelcast client:
 
-<img height="300" src="/Users/nitishku/my workspace/spring-boot-hazelcast/doc/image/near-cache.webp" width="500"/>
+![near_cache.png](image/near_cache.png)
 
 #### Near Cahce
 
